@@ -1,0 +1,13 @@
+Le jeu démarre
+
+Le joueur rentre les coordonées de sa case de départ
+
+Il a le choix de Marquer Creuser ou Annuler son choix
+
+Si le choix est Creuser le jeu verifie qu'il ne touche pas de mine sinon le jeu se termine et propose de rejouer
+
+Si le choix est Marquer le jeu afficher l'emplacement de la case comme marqué 
+
+Si le choix est Annuler le jeu retourne a la saisie utilisateur 
+
+Le jeu boucle jusqu'a soit gagner soit perdre
