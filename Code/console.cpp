@@ -8,14 +8,14 @@ void clear_screen(){
 }
 
 const int limit = 10;
-
-void display_game(int tab[][], const int limit){
-    for(int i = 0 ; i < limit ; i++){
-        for(int j = 0 ; j < limit ; j++){
+int tab2[10][10];
+void display_game(int tab[][], const int limit2){
+    for(int i = 0 ; i < limit2 ; i++){
+        for(int j = 0 ; j < limit2 ; j++){
         cout << tab[i][j];
         }
     }
 }
-int tab[10][10];
 
-display_game();
+
+display_game(tab2,limit);
