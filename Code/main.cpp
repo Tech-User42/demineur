@@ -1,7 +1,6 @@
 #include <iostream>
-#include <stdout>
 #include <string>
-
+using namespace std;
 string OverWrite(int x) {
     string s="";
     for(int i=0;i<x;i++){s+="\b \b";}
@@ -9,6 +8,6 @@ string OverWrite(int x) {
 
 int main(){   
     cout<<"Lot's of ";
-    cout<<"stuff"<<OverWrite(5)<<"\r Test à la con"<<"\n";  
+    cout<<"stuff"<<OverWrite(5)<<"\rTest à la con"<<"\n";  
     return(0);
 }
