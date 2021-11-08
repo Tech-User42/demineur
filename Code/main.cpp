@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "cls.h"
+#include "console.h"
 using namespace std;
 
 
