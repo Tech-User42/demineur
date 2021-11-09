@@ -1,4 +1,8 @@
-Le joueur doit rentrer des coordonées des cases qui selon lui ne sont pas piégées, 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Règles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Le joueur doit rentrer des coordonnées des cases qui selon lui ne sont pas piégées, 
 il doit pouvoir marquer les mines et toutes les repérées il gagne lorsque toutes les mines sont marquées,
 il perd si jamais il creuse sur une mine.
 Al afin de la partie on lui propose de rejouer  
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,3 +1,10 @@
-Le jeu doit être coder en C++.
+~~~~~~~~~~~~~~~~~~~~~~ Cahier des charges ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Le jeu doit être coder en C++ en 18 h.
 Il doit également être simple d'utilisation.
 Le jeu doit être conforme aux règles définies dans le fichier "Règles.txt".
+Le code devra être divisé dans des fonctions écrites dans différents fichiers
+C++ link grâce à des headers.
+Chaque developpeur se verra attribuer une part du code a rédiger.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,6 +1,6 @@
 Le jeu démarre
 
-Le joueur rentre les coordonées de sa case de départ
+Le joueur rentre les coordonnées de sa case de départ
 
 Il a le choix de Marquer Creuser ou Annuler son choix
 

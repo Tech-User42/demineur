@@ -1,12 +1,12 @@
-Echéancier prévisionnel
-Pendant 1 h : Vérifications travail fait pendant les vacances
-Pendant 2 h : Correction des éventuelles erreur + document de travail
-Pendant 4 h : système d’achat de propriétés et de paiement de loyer
-Pendant 1 h : test de chaque fonction et validation.
-Pendant 30 min : Bilan, concertation.
-Pendant 4 h : amélioration éventuelles du codes
-Pendant 1h : tests
-Pendant 30 min : Bilan, concertation.
-Pendant 1 h : finalisation : relecture des codes, tests finaux.
-Pendant 1 h : préparation du diaporama.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Échéancier prévisionnel~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Pendant 3 h : Établissement des documents et début d'organisation
+Pendant 2 h : Suite et fin de l'organisation et réflexion de la répartition du travail ainsi que le découpage en fonctions
+Pendant 4 h : Programmation des diverses fonctions attribué a chacun
+Pendant 1 h 30 min : Test des fonctions correction de bugs
+Pendant 4 h : Review complète du code optimisation et amélioration
+Pendant 1h 30 min: Tests d'une première build
+Pendant 2 h : Debug final 
 Pendant 1 h : préparation de l’oral.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
