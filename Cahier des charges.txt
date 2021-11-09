@@ -1,0 +1,3 @@
+Le jeu doit être coder en C++.
+Il doit également être simple d'utilisation.
+Le jeu doit être conforme aux règles définies dans le fichier "Règles.txt".
