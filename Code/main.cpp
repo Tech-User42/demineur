@@ -6,15 +6,22 @@ using namespace std;
 
 
 int main(){
-
-    char grid_start[limit][limit];
+    string nothing;
+    char grid_start[limit][limit]; // limite de  20
     char grid_mine[limit][limit];
     char tab1[limit][limit] ;
     char tab2[limit][limit] ;
+    char tab3[limit][limit] ;
+    setup_screen();
     make_grid(tab1,'-');
-    make_grid(tab2,'*');
-    display_game(tab1);
-    display_game(tab2);
+    make_grid(tab3,'-');
+    make_mine_grid(tab3,'*');
+    play(tab1,tab3);
+    //cin >> nothing;
+    //display_game(tab3);
+    
+    //clear_screen();
+    
     
     return(0);
 }
