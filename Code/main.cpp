@@ -16,6 +16,8 @@ int main(){
     make_grid(tab1,'-');
     make_grid(tab3,'-');
     make_mine_grid(tab3,'*');
+    display_game(tab3);
+    //display_game(tab3);
     play(tab1,tab3);
     //cin >> nothing;
     //display_game(tab3);

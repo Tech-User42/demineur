@@ -16,12 +16,29 @@ void mark_mine(bool tab[limit][limit],int row, int col){
     tab[row][col] = true;
 }
 void make_mine_grid(char tab[limit][limit],char symbole){
-    tab[0][0] = symbole;
-    tab[19][19] = symbole;
+    tab[10][1] = symbole; // [DeHautEnBas][DeGaucheADroite] Hauteur Largeur
+    tab[10][10] = symbole;
     }
 
 bool check_mine(char mine[limit][limit],int row,int col){
     return mine[row][col] == '*';
+}
+void afficher_champ(bool V[limit][limit], char M[limit][limit]){
+	for(int i=0;i<limit;i++){cout<<" "<<i;}
+	cout<<endl<<endl<<" ";
+
+	for(int i=0;i<limit;i++){
+		for(int j=0;j<limit;j++){		
+			if(V[i][j]==true)
+			{
+				if(M[i][j]!='*') cout<<M[i][j]<<" ";
+				if(M[i][j]=='*')  cout<<'*'<<" ";
+			}
+		else cout<<'-'<<" ";
+		}
+		cout<<"  "<<i;
+		cout<<endl<<endl<<" ";
+	}
 }
 bool play(char tab[limit][limit] ,char mine[limit][limit]){
     struct entry inp; // Structure row col permetant de récup l'entrée utilisateur
@@ -29,18 +46,21 @@ bool play(char tab[limit][limit] ,char mine[limit][limit]){
     bool marked[limit][limit];
     while(true){
         inp = input(inp);
-        cout << "1 Creuser 2 Marquer 3 Annuler."<<endl;
+        cout <<endl<<"1: Creuser 2: Marquer 3: Annuler."<<endl;
         cin >> cas;
-        mod_grid(tab,mine,inp,cas);
-        display_game(tab);
+        //mod_grid(tab,mine,inp,cas);
+        decouvrir_carre(tab, mine, limit, limit, inp.col, inp.row);
+        afficher_champ(tab,mine);
+        clear_screen();
+        //display_game(tab);
         switch (cas){
             case 1:
                 if (check_mine(mine,inp.row,inp.col) == 1){
-                    cout << "\nC'est perdu !"<<endl;
-                    return 0;
+                    //cout << "\nC'est perdu !"<<endl;
+                    //return 0;
                 }
                 else{
-                    cout << "\nC'est gagné !"<<endl;
+                    //cout << "\nC'est gagné !"<<endl;
                 }
                 break;
 
