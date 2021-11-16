@@ -12,8 +12,11 @@ void create_mines(int tab[limit][limit]){
     tab[1][0]=9; // Lignes Colonnes
     tab[2][0]=9; // Lignes Colonnes
 }
-void display_tab(int tab[limit][limit],int mine[limit][limit],int x,int y){
-    tab[x][y] = 5;
+bool check_for_mine(int mine[limit][limit],int x , int y){
+    return mine[x][y] == 9; // Return True si il y a une mine
+}
+void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
+    tab[x][y] = 5; // replace du point par 5
     for(int i = 0; i<limit;i++){
         for(int j = 0; j<limit;j++){
             if (mine[i][j]!=9){
@@ -52,9 +55,19 @@ void display_tab(int tab[limit][limit],int mine[limit][limit],int x,int y){
 }
 int play(int tab[limit][limit],int mine[limit][limit]){
     entry inp;
-    inp = input(inp);
-    clear_screen();
-    display_tab(tab,mine,inp.row,inp.col);
+    bool the_end = false;
+    while(!the_end){
+        inp = input(inp);
+        clear_screen();
+        if (check_for_mine(mine,inp.row,inp.col)){
+            the_end = game_over();
+        }
+        else{
+            display_game(tab,mine,inp.row,inp.col);
+        }
+        
+    }
+    
 
    
     return 0;
