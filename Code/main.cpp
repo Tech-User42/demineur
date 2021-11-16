@@ -6,7 +6,7 @@ using namespace std;
 
 
 int main(){
-    bool display[limit][limit] ;
+    int display[limit][limit] ;
 
     int mine[limit][limit] ;
     cout << "0 0";
