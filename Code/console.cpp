@@ -45,8 +45,8 @@ void mod_grid(char tab[limit][limit],char mine[limit][limit] ,entry inp,int cas)
         cout << "\n"; // Un ptit return pour afficher la grille correctement
     }
 }
-void decouvrir_carre(char V[20][20], char M[20][20], int m, int n, int i, int j){
-	if(V[i][j]=='-')
+void decouvrir_carre(bool V[20][20], char M[20][20], int m, int n, int i, int j){
+	if(V[i][j]==false)
 	{		
 		V[i][j]=true;
 		if(M[i][j]!='*')

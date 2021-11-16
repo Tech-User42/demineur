@@ -2,7 +2,17 @@
 #include "game.h"
 #include "console.h"
 using namespace std;
-void make_grid(char tab[limit][limit],char symbole){ // Fill les tableaux passé en argument avec le symbole passé en argument.
+void make_grid(bool tab[limit][limit],char symbole){ // Fill les tableaux passé en argument avec le symbole passé en argument.
+     for (int row = 0; row < limit; row++)
+    {
+        for (int col=0; col < limit; col++) // Double for pour fill le tab 2D
+        {
+            tab[row][col] = 0; // Fill du tab avec symbole
+        }
+    }
+    
+}
+void make_grid2(char tab[limit][limit],char symbole){ // Fill les tableaux passé en argument avec le symbole passé en argument.
      for (int row = 0; row < limit; row++)
     {
         for (int col=0; col < limit; col++) // Double for pour fill le tab 2D
@@ -40,7 +50,7 @@ void afficher_champ(bool V[limit][limit], char M[limit][limit]){
 		cout<<endl<<endl<<" ";
 	}
 }
-bool play(char tab[limit][limit] ,char mine[limit][limit]){
+bool play(bool tab[20][20] ,char mine[20][20]){
     struct entry inp; // Structure row col permetant de récup l'entrée utilisateur
     int cas;
     bool marked[limit][limit];
@@ -49,9 +59,9 @@ bool play(char tab[limit][limit] ,char mine[limit][limit]){
         cout <<endl<<"1: Creuser 2: Marquer 3: Annuler."<<endl;
         cin >> cas;
         //mod_grid(tab,mine,inp,cas);
-        decouvrir_carre(tab, mine, limit, limit, inp.col, inp.row);
+        decouvrir_carre(tab, mine, limit, limit, inp.row, inp.col);
         afficher_champ(tab,mine);
-        clear_screen();
+        //clear_screen();
         //display_game(tab);
         switch (cas){
             case 1:

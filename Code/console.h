@@ -14,7 +14,7 @@ void setup_screen(); // Règle la taille du terminal
 void display_game(char tab[limit][limit]); // Affiche la grille de démineur passé en argument.
 void mod_grid(char tab[limit][limit],char mine[limit][limit] ,entry inp,int cas);
 mine_detection check_mine_around(char tab[limit][limit],char mine[limit][limit], int ii ,int jj);
-void decouvrir_carre(char V[limit][limit], char M[limit][limit], int m, int n, int i, int j);
+void decouvrir_carre(bool V[limit][limit], char M[limit][limit], int m, int n, int i, int j);
 
 
 int choice();
