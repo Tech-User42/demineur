@@ -42,9 +42,9 @@ void decouvrir_carre(bool V[20][20], int M[20][20], int m, int n, int i, int j){
 
 
 entry input(entry inp){
-    cout << endl << "\rEntrez les coordonées d'une case : ";
+    cout << endl << "Entrez les coordonées d'une case : ";
     scanf("%d %d",&inp.row ,&inp.col);
-    cout << "\rVous avez choisi la case "<<inp.row<<" "<<inp.col<<endl;
+    cout << "Vous avez choisi la case "<<inp.row<<" "<<inp.col<<endl;
     return inp;
 }
 

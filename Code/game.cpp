@@ -13,13 +13,13 @@ void create_mines(int tab[limit][limit]){
     tab[2][0]=9; // Lignes Colonnes
 }
 void display_tab(int tab[limit][limit],int mine[limit][limit],int x,int y){
-    tab[x][y] = 2;
+    tab[x][y] = 5;
     for(int i = 0; i<limit;i++){
         for(int j = 0; j<limit;j++){
             if (mine[i][j]!=9){
                 cout << tab[i][j];
             }
-            else if(x-i == 1 && y-j == 1 || x-i == -1 && y-j == -1){
+            else if((x-i == 1) && (y-j == 1) || (x-i == -1) && (y-j == -1)){
                 for(int t = i -1; t<i+2;t++){
                     for(int h = j - 1; h<j+2;h++){
                         if(h > 19){
@@ -51,8 +51,9 @@ void display_tab(int tab[limit][limit],int mine[limit][limit],int x,int y){
     }
 }
 int play(int tab[limit][limit],int mine[limit][limit]){
-     entry inp;
+    entry inp;
     inp = input(inp);
+    clear_screen();
     display_tab(tab,mine,inp.row,inp.col);
 
    

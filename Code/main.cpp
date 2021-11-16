@@ -10,7 +10,7 @@ int main(){
 
     int mine[limit][limit] ;
     cout << "0 0";
-    setup_screen();
+    //setup_screen();
 
     create_tab(display);
     create_mines(mine);
