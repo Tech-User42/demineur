@@ -12,7 +12,7 @@
 - Linux `sudo chmod+x ./Code && ./Code`
 
 ### Notes 
-- Certaines fonctionnalitées peuvent ne pa fonctionner suivant votre système d'exploitation ce code à été testé sous Windows 11 Pro et Ubuntu 18.04.
+- Certaines fonctionnalités peuvent ne pas fonctionner suivant votre système d'exploitation ce code à été testé sous Windows 11 Pro et Ubuntu 18.04.
 ## Devs du projet 
 
 - *[Théo.M](https://github.com/Tech-User42)*
