@@ -15,17 +15,28 @@ void create_mines(int tab[limit][limit]){
 bool check_for_mine(int mine[limit][limit],int x , int y){
     return mine[x][y] == 9; // Return True si il y a une mine
 }
+
 void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
     tab[x][y] = 5; // replace du point par 5
+    setColor(4, 7); // Blue FG White BG
     cout << "   ";
     for(int i = 0; i<limit;i++){
         cout << i << "  ";
     }
-    cout << endl << endl;
+    c_return();
     for(int i = 0; i<limit;i++){
-        cout << i << "  ";
+        setColor(4, 7); // Blue FG White BG
+        cout << i ;
+        setColor(9, 9); // Reset des couleurs
+        cout << "  ";
         for(int j = 0; j<limit;j++){
-            if (mine[i][j]!=9){
+            if(tab[i][j]==5){
+                setColor(2, 3); // Blue FG White BG
+                cout << tab[i][j]; 
+                setColor(9, 9); // Reset des couleurs
+                cout << "  ";
+            }
+            else if (mine[i][j]!=9){
                 cout << tab[i][j] << "  ";
             }
             else if((x-i == 1) && (y-j == 1) || (x-i == -1) && (y-j == -1)){
@@ -54,7 +65,7 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
                 cout << tab[i][j]<< "  ";
             }
         }
-        cout << endl <<endl;
+        c_return();
     }
 }
 
