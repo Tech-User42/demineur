@@ -2,14 +2,17 @@
 
 ![Doliprane.png](https://github.com/Tech-User42/demineur/blob/main/Documents/screen.png)
 ## Important !
-- Pour pouvoir utiliser ce projet correctement voici les étape à suivre :
+- Pour pouvoir utiliser ce projet correctement voici les étapes à suivre :
 1. `git clone https://github.com/Tech-User42/demineur.git`
 2. `cd demineur`
-- Utilisez la commande adapté a votre S.E :
+- Utilisez la commande adaptée à votre S.E :
 
 - Windows `Code.exe`
 
 - Linux `sudo chmod+x ./Code && ./Code`
+
+### Notes 
+- Certaines fonctionnalitées peuvent ne pa fonctionner suivant votre système d'exploitation ce code à été testé sous Windows 11 Pro et Ubuntu 18.04.
 ## Devs du projet 
 
 - *[Théo.M](https://github.com/Tech-User42)*
