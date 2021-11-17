@@ -41,17 +41,17 @@ void c_return(){ // Fonction de retour en couleur pour faire le contour en bleu 
 void display_grid(int tab[limit][limit]){  // Affiche la grille de démineur passé en argument. Ligne Colonne
 setColor(4, 7); // Blue FG White BG
 cout << "   ";
-    for(int i = 0; i<limit;i++){
+    for(unsigned short i = 0; i<limit;i++){
             
             cout << i << "  "; 
     }
     cout << endl;
-    for(int i = 0 ; i < limit ; i++){
+    for(unsigned short i = 0 ; i < limit ; i++){
         setColor(4, 7); // Blue FG White BG
         cout << i ;
         setColor(9, 9); // Reset des couleurs
         cout << "  ";
-        for(int j = 0 ; j < limit ; j++){
+        for(unsigned short j = 0 ; j < limit ; j++){
             cout << tab[i][j] << "  "; // Double For pour print la grille du Tab 2D.
         }
         cout << "\n"; // Un ptit return pour afficher la grille correctement.

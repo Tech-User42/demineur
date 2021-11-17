@@ -6,8 +6,8 @@
 using namespace std;
 
 void create_tab(int tab[limit][limit]){ // Fill un tableau avec des 0.
-    for(int i = 0; i<limit;i++){
-        for(int j = 0; j<limit;j++){
+    for(unsigned short i = 0; i<limit;i++){
+        for(unsigned short j = 0; j<limit;j++){
             tab[i][j] = 0;
         }
     }
@@ -24,16 +24,16 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
     tab[x][y] = 5; // Replace du point par 5.
     setColor(4, 7); // Blue FG White BG.
     cout << "   ";
-    for(int i = 0; i<limit;i++){
+    for(unsigned short i = 0; i<limit;i++){
         cout << i << "  "; // Display des numéro de colonnes.
     }
     c_return();
-    for(int i = 0; i<limit;i++){
+    for(unsigned short i = 0; i<limit;i++){
         setColor(4, 7); // Blue FG White BG.
         cout << i ; // Display des numéro de lignes.
         setColor(9, 9); // Reset des couleurs.
         cout << "  ";
-        for(int j = 0; j<limit;j++){
+        for(unsigned short j = 0; j<limit;j++){
             if(tab[i][j]==5){
                 setColor(2, 3); // Blue FG White BG.
                 cout << tab[i][j]; 
@@ -44,8 +44,8 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
                 cout << tab[i][j] << "  "; // On display 0. 
             }
             else if((x-i == 1) && (y-j == 1) || (x-i == -1) && (y-j == -1)){ // Bon basiquement cette section sert à ne pas sortir du tableau et afficher la proximitée avec les mines.
-                for(int t = i -1; t<i+2;t++){
-                    for(int h = j - 1; h<j+2;h++){
+                for(unsigned short t = i -1; t<i+2;t++){
+                    for(unsigned short h = j - 1; h<j+2;h++){
                         if(h > limit-1){
                             h = limit-1;
                         }

@@ -33,7 +33,7 @@ entry input(entry inp){
 }
 
 int choice(){
-    int choice;
+    unsigned short choice;
     cin >> choice;
     return choice;
 }
