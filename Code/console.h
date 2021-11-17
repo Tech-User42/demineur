@@ -1,3 +1,6 @@
+/*
+############ Librairie homemade ############
+*/
 #include "game.h"
 
 struct entry{

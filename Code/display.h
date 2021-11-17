@@ -1,4 +1,7 @@
 #include <iostream>
+/*
+############ Library by Ezio ############
+*/
 #include "color.h"
 #define limit 10 // Limite de dimensions de game.
 using namespace std;
