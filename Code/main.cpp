@@ -25,6 +25,7 @@ void setup_game(int display[limit][limit],int mine[limit][limit]){
 int main(int argc,  char *argv[]){
     int display[limit][limit] ;
     int mine[limit][limit] ;
+    bool cheat = 0;
     setup_game(display,mine);
     if ((argc > 1) == 1){ // Check si un argument est passé en argument.
         if(string(argv[1]) == "--cheats"){ // Check si le 1er argument est --cheats.
@@ -32,8 +33,9 @@ int main(int argc,  char *argv[]){
             cout << "      CODE DE TRICHE ACTIF !     "<<endl<<endl;
             setColor(9,9); // Vert sur Rouge.
             display_grid(mine); // Display de la grille de mine.
+            cheat = 1;
         }
     }
-    play(display,mine); // Start la game.
+    play(display,mine,cheat); // Start la game.
     return(0);
 }

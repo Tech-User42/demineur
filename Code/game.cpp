@@ -78,14 +78,25 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
     }
 }
 
-int play(int tab[limit][limit],int mine[limit][limit]){
+int play(int tab[limit][limit],int mine[limit][limit],bool cheat){
     entry inp; // On init la structure qui comporte inp.row et inp.col pour transférer 2 paramètres.
     bool the_end = false; // Flag pour la loop de game (à revoir ça me plait pas).
     while(!the_end){
         inp = input(inp); // On demande les coords avec la fonction structurée.
         clear_screen();
         if (check_for_mine(mine,inp.row,inp.col)){ // Si le joueur à touché une mine on trigger le Game-Over.
-            the_end = game_over(); // Trigger le Game-Over.
+            the_end = game_over(tab,mine); // Trigger le Game-Over.
+            if(the_end==0){
+                if(cheat==0){
+                    display_empty();
+                }
+                else{
+                     display_grid(mine);
+                }
+                
+                inp = input(inp); // On demande les coords avec la fonction structurée. 
+            }
+            
         }
         else{ // Sinon on continue de run la game en affichant la grille
             display_game(tab,mine,inp.row,inp.col); // On affiche la grille une fois l'entrée récupérée.

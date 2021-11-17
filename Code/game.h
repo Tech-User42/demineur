@@ -3,7 +3,7 @@
 */
 #include "display.h"
 
-int play(int tab[limit][limit],int mine[limit][limit]);
+int play(int tab[limit][limit],int mine[limit][limit],bool cheat);
 void create_tab(int tab[limit][limit]);
 void display_game(int tab[limit][limit],int mine[limit][limit],int x, int y);
 void create_mines(int tab[limit][limit]);
