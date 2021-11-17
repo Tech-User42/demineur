@@ -26,10 +26,16 @@ int game_over(){
     open_file("game_over.txt");
     return  1;
 }    
-void display_grid(int tab[limit][limit]){  // Affiche la grille de démineur passé en argument. Ligne Colonne 
+void display_grid(int tab[limit][limit]){  // Affiche la grille de démineur passé en argument. Ligne Colonne
+cout << "   ";
+    for(int i = 0; i<limit;i++){
+            cout << i << "  "; 
+    }
+    cout << endl;
     for(int i = 0 ; i < limit ; i++){
+        cout << i << "  ";
         for(int j = 0 ; j < limit ; j++){
-            cout << tab[i][j] << " "; // Double For pour print la grille du Tab 2D.
+            cout << tab[i][j] << "  "; // Double For pour print la grille du Tab 2D.
         }
         cout << "\n\n"; // Un ptit return pour afficher la grille correctement.
     }

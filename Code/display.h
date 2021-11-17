@@ -1,5 +1,5 @@
 #include <iostream>
-#define limit 20 // Limite de dimensions de game.
+#define limit 10 // Limite de dimensions de game.
 using namespace std;
 int game_over();
 void open_file(string file);
