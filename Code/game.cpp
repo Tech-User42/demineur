@@ -8,7 +8,18 @@
 #include "display.h"
 #include "console.h"
 using namespace std;
+bool all_checked(int checked[limit][limit],int mine[limit][limit]){
+    unsigned short total = 0;
+    for(unsigned short i = 0; i<limit;i++){
+        for(unsigned short j = 0; j<limit;j++){
+            if(mine[i][j]==9&&checked[i][j]==1){
+                total++;
+            } 
+    }
+    }
+    return (total == 3);
 
+}
 void create_tab(int tab[limit][limit]){ // Fill un tableau avec des 0.
     for(unsigned short i = 0; i<limit;i++){
         for(unsigned short j = 0; j<limit;j++){
@@ -21,12 +32,18 @@ void create_mines(int tab[limit][limit]){
         tab[random()][random()]=9; // Lignes Colonnes.
     }
 }
+void mark_mine(int tab[limit][limit],int marked[limit][limit],int x,int y){
+    marked[x][y] = 1;
+    tab[x][y] = 6;
+}
+void creuser(int tab[limit][limit],int x,int y){
+    tab[x][y] = 5;
+}
 bool check_for_mine(int mine[limit][limit],int x , int y){
     return mine[x][y] == 9; // Return True si il y a une mine.
 }
 
 void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
-    tab[x][y] = 5; // Replace du point par 5.
     setColor(4, 7); // Blue FG White BG.
     cout << "   ";
     for(unsigned short i = 0; i<limit;i++){
@@ -41,6 +58,12 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
         for(unsigned short j = 0; j<limit;j++){
             if(tab[i][j]==5){
                 setColor(2, 3); // Blue FG White BG.
+                cout << tab[i][j]; 
+                setColor(9, 9); // Reset des couleurs.
+                cout << "  ";
+            }
+            else if(tab[i][j]==6){
+                setColor(5, 3); // Magenta FG White BG
                 cout << tab[i][j]; 
                 setColor(9, 9); // Reset des couleurs.
                 cout << "  ";
@@ -78,28 +101,46 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
     }
 }
 
-int play(int tab[limit][limit],int mine[limit][limit],bool cheat){
+int play(int tab[limit][limit],int mine[limit][limit],int marked[limit][limit],bool cheat){
     entry inp; // On init la structure qui comporte inp.row et inp.col pour transférer 2 paramètres.
     bool the_end = false; // Flag pour la loop de game (à revoir ça me plait pas).
     while(!the_end){
         inp = input(inp); // On demande les coords avec la fonction structurée.
-        clear_screen();
-        if (check_for_mine(mine,inp.row,inp.col)){ // Si le joueur à touché une mine on trigger le Game-Over.
-            the_end = game_over(tab,mine); // Trigger le Game-Over.
-            if(the_end==0){
-                if(cheat==0){
-                    display_empty();
+        switch(choice()){
+            case 1:
+                creuser(mine,inp.row,inp.col);
+                if (check_for_mine(mine,inp.row,inp.col)){ // Si le joueur à touché une mine on trigger le Game-Over.
+                the_end = game_over(tab,mine); // Trigger le Game-Over.
+                    if(the_end==0){
+                        if(cheat==0){
+                            display_empty();
+                        }
+                        else{
+                            display_grid(mine);
+                        }
+                        
+                        inp = input(inp); // On demande les coords avec la fonction structurée. 
+                    }
+                    else{
+                        break;
+                    }
+                    
                 }
-                else{
-                     display_grid(mine);
+                else{ // Sinon on continue de run la game en affichant la grille
+                    display_game(tab,mine,inp.row,inp.col); // On affiche la grille une fois l'entrée récupérée.
                 }
-                
-                inp = input(inp); // On demande les coords avec la fonction structurée. 
-            }
-            
+                break;
+            case 2:
+                mark_mine(tab,marked,inp.row,inp.col);
+                display_game(tab,mine,inp.row,inp.col);
+                break; 
+            default:
+                clear_screen();
+                break;
         }
-        else{ // Sinon on continue de run la game en affichant la grille
-            display_game(tab,mine,inp.row,inp.col); // On affiche la grille une fois l'entrée récupérée.
+        if(all_checked(marked,tab)){
+            clear_screen();
+            cout << "OK";
         }
     }
     return 0;
