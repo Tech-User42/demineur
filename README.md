@@ -4,7 +4,7 @@
 ## Devs du projet 
 
 - *[Théo.M](https://github.com/Tech-User42)*
-- *Clément.S*
+- *[Clément.S](https://github.com/Clem358)*
 - *Axel.P*
 
 Avec l'aide de *[Ezio Cangialosi](https://github.com/b84500)* ([Sa librairie couleur ;)](https://github.com/b84500/Cout_Color_for_Linux))
