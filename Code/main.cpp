@@ -26,7 +26,9 @@ int main(int argc,  char *argv[]){
     title(); // Display Title.
     if ((argc > 1) == 1){ // Check si un argument est passé en argument.
         if(string(argv[1]) == "--cheats"){ // Check si le 1er argument est --cheats.
-            cout << "CODE DE TRICHE ACTIF !"<<endl<<endl;
+            setColor(4,1); // Vert sur Rouge.
+            cout << "      CODE DE TRICHE ACTIF !     "<<endl<<endl;
+            setColor(9,9); // Vert sur Rouge.
             display_grid(mine); // Display de la grille de mine.
         }
     }
