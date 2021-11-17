@@ -10,7 +10,7 @@
 
 void title(){
     clear_screen();
-    open_file("fonts\\title.txt");
+    open_file("Fonts\\title.txt");
 }
 void open_file(string file){
     string line;
@@ -29,7 +29,7 @@ void open_file(string file){
 }
 int game_over(){
     clear_screen();
-    open_file("fonts\\game_over.txt");
+    open_file("Fonts\\game_over.txt");
     return  1;
 }
 
