@@ -11,7 +11,7 @@
 
 - Linux `sudo chmod+x ./Code && ./Code`
 ## TODO List 
-- [ ]https://github.com/Tech-User42/demineur/issues/1
+- [] Optimiser tout ça [#WindowsTier](https://github.com/Tech-User42/demineur/issues/1)
 ### Notes 
 - Certaines fonctionnalités peuvent ne pas fonctionner suivant votre système d'exploitation ce code à été testé sous Windows 11 Pro et Ubuntu 18.04.
 ## Devs du projet 
