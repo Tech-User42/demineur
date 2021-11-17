@@ -17,10 +17,16 @@ bool check_for_mine(int mine[limit][limit],int x , int y){
 }
 void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
     tab[x][y] = 5; // replace du point par 5
+    cout << "   ";
     for(int i = 0; i<limit;i++){
+        cout << i << "  ";
+    }
+    cout << endl << endl;
+    for(int i = 0; i<limit;i++){
+        cout << i << "  ";
         for(int j = 0; j<limit;j++){
             if (mine[i][j]!=9){
-                cout << tab[i][j];
+                cout << tab[i][j] << "  ";
             }
             else if((x-i == 1) && (y-j == 1) || (x-i == -1) && (y-j == -1)){
                 for(int t = i -1; t<i+2;t++){
@@ -39,20 +45,19 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
                         }
                         if (mine[t][h]!=9){
                             tab[t][h] = 1;
-                        }
-                        
+                        } 
                     }
                 }
-                cout << tab[i][j];
+                cout << tab[i][j] << "  ";
             }
             else{
-                cout << tab[i][j];
+                cout << tab[i][j]<< "  ";
             }
         }
-    
-        cout << endl;
+        cout << endl <<endl;
     }
 }
+
 int play(int tab[limit][limit],int mine[limit][limit]){
     entry inp;
     bool the_end = false;
@@ -65,10 +70,6 @@ int play(int tab[limit][limit],int mine[limit][limit]){
         else{
             display_game(tab,mine,inp.row,inp.col);
         }
-        
     }
-    
-
-   
     return 0;
 }

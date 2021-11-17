@@ -29,9 +29,9 @@ int game_over(){
 void display_grid(int tab[limit][limit]){  // Affiche la grille de démineur passé en argument. Ligne Colonne 
     for(int i = 0 ; i < limit ; i++){
         for(int j = 0 ; j < limit ; j++){
-            cout << tab[i][j]; // Double For pour print la grille du Tab 2D.
+            cout << tab[i][j] << " "; // Double For pour print la grille du Tab 2D.
         }
-        cout << "\n"; // Un ptit return pour afficher la grille correctement.
+        cout << "\n\n"; // Un ptit return pour afficher la grille correctement.
     }
-    cout << "\n";
+    cout << "\n\n";
 }   
