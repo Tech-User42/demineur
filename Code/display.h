@@ -1,9 +1,11 @@
+#define limit 10 // Limite de dimensions de game.
 #include <iostream>
 /*
 ############ Library by Ezio ############
 */
-#include "color.h"
-#define limit 10 // Limite de dimensions de game.
+
+
+
 using namespace std;
 int game_over();
 void open_file(string file);

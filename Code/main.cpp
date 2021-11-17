@@ -6,24 +6,26 @@
 * Version/Màj .... : 0.1
 * Licence ........ : GPLv4
 *************************************************************/
-#include <iostream>
-#include <string>
 /*
 ############ Library homemade ############
 */
-#include "console.h"
-#include "game.h"
+#include "main.h"
 
-using namespace std;
 
-int main(int argc,  char *argv[]){
-    int display[limit][limit] ;
-    int mine[limit][limit] ;
+void setup_game(int display[limit][limit],int mine[limit][limit]){
+    init_rand();
     setup_screen(); // Définition des Colonnes et des lignes du terminal.
     create_tab(display); // Fill le tableau display avec des 0.
     create_tab(mine); // Fill le tableau mine avec des 0.
     create_mines(mine); // Place les mines.
     title(); // Display Title.
+    
+}
+
+int main(int argc,  char *argv[]){
+    int display[limit][limit] ;
+    int mine[limit][limit] ;
+    setup_game(display,mine);
     if ((argc > 1) == 1){ // Check si un argument est passé en argument.
         if(string(argv[1]) == "--cheats"){ // Check si le 1er argument est --cheats.
             setColor(4,1); // Vert sur Rouge.

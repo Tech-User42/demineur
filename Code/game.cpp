@@ -2,6 +2,10 @@
 /*
 ############ Library homemade ############
 */
+#include "game.h"
+#include "random.h"
+#include "color.h"
+#include "display.h"
 #include "console.h"
 using namespace std;
 
@@ -13,8 +17,9 @@ void create_tab(int tab[limit][limit]){ // Fill un tableau avec des 0.
     }
 }
 void create_mines(int tab[limit][limit]){
-    tab[1][0]=9; // Lignes Colonnes.
-    tab[2][0]=9; // Lignes Colonnes.
+    for(unsigned short i = 0; i<4;i++){
+        tab[random()][random()]=9; // Lignes Colonnes.
+    }
 }
 bool check_for_mine(int mine[limit][limit],int x , int y){
     return mine[x][y] == 9; // Return True si il y a une mine.

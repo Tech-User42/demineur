@@ -5,6 +5,8 @@
 */
 #include "display.h"
 #include "console.h"
+#include "color.h"
+#include "random.h"
 
 void title(){
     clear_screen();

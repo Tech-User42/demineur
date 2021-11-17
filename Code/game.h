@@ -2,6 +2,7 @@
 ############ Library homemade ############
 */
 #include "display.h"
+
 int play(int tab[limit][limit],int mine[limit][limit]);
 void create_tab(int tab[limit][limit]);
 void display_game(int tab[limit][limit],int mine[limit][limit],int x, int y);
