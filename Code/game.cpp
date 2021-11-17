@@ -9,13 +9,15 @@
 #include "console.h"
 using namespace std;
 bool all_checked(int checked[limit][limit],int mine[limit][limit]){
+    cout << "\n\n\n\n";
     unsigned short total = 0;
     for(unsigned short i = 0; i<limit;i++){
         for(unsigned short j = 0; j<limit;j++){
             if(mine[i][j]==9&&checked[i][j]==1){
                 total++;
+                cout << total;
             } 
-    }
+        }
     }
     return (total == 3);
 
@@ -106,6 +108,10 @@ int play(int tab[limit][limit],int mine[limit][limit],int marked[limit][limit],b
     bool the_end = false; // Flag pour la loop de game (à revoir ça me plait pas).
     while(!the_end){
         inp = input(inp); // On demande les coords avec la fonction structurée.
+        if(all_checked(marked,tab)){
+            clear_screen();
+            cout << "OK";
+        }
         switch(choice()){
             case 1:
                 creuser(mine,inp.row,inp.col);
