@@ -10,7 +10,8 @@
 - Windows `Code.exe`
 
 - Linux `sudo chmod+x ./Code && ./Code`
-
+## TODO List 
+- [ ] #1
 ### Notes 
 - Certaines fonctionnalités peuvent ne pas fonctionner suivant votre système d'exploitation ce code à été testé sous Windows 11 Pro et Ubuntu 18.04.
 ## Devs du projet 
