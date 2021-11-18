@@ -68,10 +68,10 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
                 setColor(9, 9); // Reset des couleurs.
                 cout << "  ";
             }
-            else if (mine[i][j]==9){
+            else if ((mine[i][j]==9) && (tab[i][j]!=6) && (tab[i][j]!=5)){
                 cout << tab[i][j] << "  "; // On display 0. 
             }
-            else if((x-i == 1) && (y-j == 1) || (x-i == -1) && (y-j == -1)){ // Bon basiquement cette section sert à ne pas sortir du tableau et afficher la proximitée avec les mines.
+            else if(((x-i == 1) && (y-j == 1)) || ((x-i == -1) && (y-j == -1))){ // Bon basiquement cette section sert à ne pas sortir du tableau et afficher la proximitée avec les mines.
                 for(unsigned short t = i -1; t<i+2;t++){
                     for(unsigned short h = j - 1; h<j+2;h++){
                         if(h > limit-1){

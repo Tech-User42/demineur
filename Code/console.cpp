@@ -41,5 +41,7 @@ int choice(){
     unsigned short choice;
     cout << "Que souhaitez vous faire : 1- Creuser 2- Marquer 3- Annuler : ";
     cin >> choice;
+    cin.ignore();
+    cout << "\n";
     return choice;
 }

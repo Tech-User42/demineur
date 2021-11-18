@@ -39,6 +39,13 @@ int main(int argc,  char *argv[]){
             display_grid(mine); // Display de la grille de mine.
             cheat = 1;
         }
+        else{
+            display_grid(display); // Display de la grille de mine.
+        }
+        
+    }
+    else{
+        display_grid(display); // Display de la grille de mine.
     }
     play(display,mine,marked,cheat); // Start la game.
     return(0);
