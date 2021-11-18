@@ -7,9 +7,9 @@
 2. `cd demineur`
 - Utilisez la commande adaptée à votre S.E :
 
-- Windows `Code.exe`
+- Windows `Demineur_Windows.exe`
 
-- Linux `sudo chmod+x ./Code && ./Code`
+- Linux `sudo chmod+x ./Demineur_Linux && ./Demineur_Linux`
 ## Pour faire vos propres compilations [c'est par ici ;)](https://github.com/Tech-User42/demineur/blob/main/Documents/compilation.md)
 
 ## TODO List 
