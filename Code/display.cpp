@@ -53,7 +53,7 @@ int game_over(int display[limit][limit],int mine[limit][limit]){
     clear_screen();
     string retry;
     setColor(1, 3); // Blue FG White BG.
-    cout << "Vous avez touch\202 une mine, voulez vous relancer une partie ? (O/N) ";
+    cout << "Vous avez touch"<<ET<<"une mine, voulez vous relancer une partie ? (O/N) ";
     cin >> retry;
     if(retry=="o"||retry=="O"||retry=="y"||retry=="Y"){
         setColor(9, 9); // Blue FG White BG.
@@ -87,9 +87,9 @@ void c_return(){ // Fonction de retour en couleur pour faire le contour en bleu 
 }
 void print_help(){
     setColor(2, 3); // Blue FG White BG.
-    cout << "Case creus\202es : " << 5 << endl;
+    cout << "Case creus"<<ET<<" : " << 5 << endl;
     setColor(5, 3); // Magenta FG White BG
-    cout << "Case marqu\202es : " << 6 << endl << endl; 
+    cout << "Case marqu"<<ET<<"es : " << 6 << endl << endl; 
     setColor(9, 9); // Reset des couleurs.
 
 }

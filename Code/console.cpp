@@ -35,7 +35,7 @@ void clear_screen(){ // Clear la console en fonction du S.E.
 
 
 entry input(entry inp){ // Gère l'entrée utilisateur.
-    cout << endl << "Entrez les coordon\202es d'une case (Ligne de 0 \205 "<<limit-1<<" --> Colonne de 0 \205 "<<limit-1<<"): ";
+    cout << endl << "Entrez les coordon\202es d'une case (Ligne de 0 "<<A<<" "<<limit-1<<" --> Colonne de 0 "<<A<<" "<<limit-1<<"): ";
     cin >> inp.row;
     cout << " ";
     cin.ignore();
