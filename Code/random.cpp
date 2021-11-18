@@ -1,3 +1,10 @@
+/*************************************************************
+* Nom ............ : random.cpp
+* Rôle ........... : Générer un nombre aléatoire pour les mines
+* Auteur ......... : Clément.S
+* Date création .. : 2021
+* Version/Màj .... : 0.1
+*************************************************************/
 #include "random.h"
 
 int init_rand(){ // Init du random avec le timestamp, nécessaire de le faire au moins une fois avant d'utiliser gen_random().

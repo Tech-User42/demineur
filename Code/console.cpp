@@ -1,3 +1,10 @@
+/*************************************************************
+* Nom ............ : console.cpp
+* Rôle ........... : Gérer la console en fonction du S.E
+* Auteur ......... : Alex.P
+* Date création .. : 2021
+* Version/Màj .... : 0.1
+*************************************************************/
 #include <iostream>
 /*
 ############ Library homemade ############

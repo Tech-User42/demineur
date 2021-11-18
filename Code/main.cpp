@@ -4,7 +4,6 @@
 * Auteur ......... : Théo MARECHAL
 * Date création .. : 2021
 * Version/Màj .... : 0.1
-* Licence ........ : GPLv4
 *************************************************************/
 /*
 ############ Library homemade ############

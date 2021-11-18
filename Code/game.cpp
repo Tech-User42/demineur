@@ -1,3 +1,10 @@
+/*************************************************************
+* Nom ............ : game.cpp
+* Rôle ........... : Gére le système de jeu comporte la boucle de jeu.
+* Auteur ......... : Alex.P Clément.S Théo.M
+* Date création .. : 2021
+* Version/Màj .... : 0.1
+*************************************************************/
 #include <iostream>
 /*
 ############ Library homemade ############

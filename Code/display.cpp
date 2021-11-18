@@ -1,3 +1,10 @@
+/*************************************************************
+* Nom ............ : display.cpp
+* Rôle ........... : Gérer l'affichage des grilles du démineur.
+* Auteur ......... : Alex.P Clément.S Théo.M
+* Date création .. : 2021
+* Version/Màj .... : 0.1
+*************************************************************/
 #include <fstream>
 #include <string>
 /*
