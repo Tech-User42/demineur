@@ -87,7 +87,7 @@ void c_return(){ // Fonction de retour en couleur pour faire le contour en bleu 
 }
 void print_help(){
     setColor(2, 3); // Blue FG White BG.
-    cout << "Case creus"<<ET<<" : " << 5 << endl;
+    cout << "Case creus"<<ET<<"es : " << 5 << endl;
     setColor(5, 3); // Magenta FG White BG
     cout << "Case marqu"<<ET<<"es : " << 6 << endl << endl; 
     setColor(9, 9); // Reset des couleurs.
