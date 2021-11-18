@@ -10,7 +10,8 @@
 - Windows `Code.exe`
 
 - Linux `sudo chmod+x ./Code && ./Code`
-## [Pour faire vos propres compilations c'est par ici ;)](https://github.com/Tech-User42/demineur/blob/main/Documents/compilation.md)
+## Pour faire vos propres compilations [c'est par ici ;)](https://github.com/Tech-User42/demineur/blob/main/Documents/compilation.md)
+
 ## TODO List 
 - [ ] Optimiser tout ça [#WindowsTier](https://github.com/Tech-User42/demineur/issues/1)
 ## Notes 
