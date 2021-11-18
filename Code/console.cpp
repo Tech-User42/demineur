@@ -5,6 +5,7 @@
 #include "console.h"
 #include "game.h"
 #include "display.h"
+#include "color.h"
 using namespace std;
 
 void setup_screen(){
@@ -20,6 +21,7 @@ void clear_screen(){
     #ifdef _WIN32
     system("cls");
     #endif
+
 }
 
 
@@ -27,7 +29,10 @@ void clear_screen(){
 
 entry input(entry inp){
     cout << endl << "Entrez les coordon\202es d'une case (Ligne de 0 \205 "<<limit-1<<" --> Colonne de 0 \205 "<<limit-1<<"): ";
-    scanf("%d %d",&inp.row ,&inp.col);
+    cin >> inp.row;
+    cout << " ";
+    cin.ignore();
+    cin >> inp.col;
     cout << "Vous avez choisi la case "<<inp.row<<" "<<inp.col<<endl;
     return inp;
 }

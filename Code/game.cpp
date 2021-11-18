@@ -15,9 +15,9 @@ bool all_checked(int checked[limit][limit],int mine[limit][limit]){
             if(mine[i][j]==9&&checked[i][j]==1){
                 total++;
             } 
+        }
     }
-    }
-    return (total == 3);
+    return (total == 4);
 
 }
 void create_tab(int tab[limit][limit]){ // Fill un tableau avec des 0.
@@ -40,22 +40,22 @@ void creuser(int tab[limit][limit],int x,int y){
     tab[x][y] = 5;
 }
 bool check_for_mine(int mine[limit][limit],int x , int y){
-    return mine[x][y] == 9; // Return True si il y a une mine.
+    return(mine[x][y] == 9); // Return True si il y a une mine.
 }
 
 void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
     setColor(4, 7); // Blue FG White BG.
     cout << "   ";
-    for(unsigned short i = 0; i<limit;i++){
+    for(int i = 0; i<limit;i++){
         cout << i << "  "; // Display des numéro de colonnes.
     }
     c_return();
-    for(unsigned short i = 0; i<limit;i++){
+    for(int i  = 0; i<limit;i++){
         setColor(4, 7); // Blue FG White BG.
         cout << i ; // Display des numéro de lignes.
         setColor(9, 9); // Reset des couleurs.
         cout << "  ";
-        for(unsigned short j = 0; j<limit;j++){
+        for(int j = 0; j<limit;j++){
             if(tab[i][j]==5){
                 setColor(2, 3); // Blue FG White BG.
                 cout << tab[i][j]; 
@@ -68,7 +68,7 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
                 setColor(9, 9); // Reset des couleurs.
                 cout << "  ";
             }
-            else if (mine[i][j]!=9){
+            else if (mine[i][j]==9){
                 cout << tab[i][j] << "  "; // On display 0. 
             }
             else if((x-i == 1) && (y-j == 1) || (x-i == -1) && (y-j == -1)){ // Bon basiquement cette section sert à ne pas sortir du tableau et afficher la proximitée avec les mines.
@@ -86,13 +86,14 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
                         if(t < 0){
                             t = 0;
                         }
-                        if (mine[t][h]!=9){
+                        if (mine[t][h]!=9 && tab[i][j]!=6 && tab[i][j]!=5){
                             tab[t][h] = 1;
                         } 
                     }
                 }
                 cout << tab[i][j] << "  ";
             }
+            
             else{
                 cout << tab[i][j]<< "  ";
             }
@@ -109,8 +110,7 @@ int play(int tab[limit][limit],int mine[limit][limit],int marked[limit][limit],b
         clear_screen();
         switch(choice()){
             case 1:
-                creuser(mine,inp.row,inp.col);
-                if (check_for_mine(mine,inp.row,inp.col)){ // Si le joueur à touché une mine on trigger le Game-Over.
+                if (check_for_mine(mine,inp.row,inp.col)==1){ // Si le joueur à touché une mine on trigger le Game-Over.
                 the_end = game_over(tab,mine); // Trigger le Game-Over.
                     if(the_end==0){
                         if(cheat==0){
@@ -123,11 +123,12 @@ int play(int tab[limit][limit],int mine[limit][limit],int marked[limit][limit],b
                         inp = input(inp); // On demande les coords avec la fonction structurée. 
                     }
                     else{
-                        break;
+                        setColor(0,7);
                     }
                     
                 }
                 else{ // Sinon on continue de run la game en affichant la grille
+                    creuser(tab,inp.row,inp.col);
                     display_game(tab,mine,inp.row,inp.col); // On affiche la grille une fois l'entrée récupérée.
                 }
                 break;
@@ -139,9 +140,11 @@ int play(int tab[limit][limit],int mine[limit][limit],int marked[limit][limit],b
                 clear_screen();
                 break;
         }
-        if(all_checked(marked,tab)){
+        if(all_checked(marked,mine)){
+            setColor(7,0);
             clear_screen();
-            cout << "OK";
+            you_win();
+            the_end = 1;
         }
     }
     return 0;

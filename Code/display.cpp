@@ -11,7 +11,21 @@
 
 void title(){
     clear_screen();
-    open_file("title.txt");
+    #ifdef linux // Parce que unifier les systèmes serait trop sympa...
+    open_file("Fonts/title.txt");
+    #endif
+    #ifdef _WIN32
+    open_file("Fonts\\title.txt");
+    #endif  
+}
+void you_win(){
+    clear_screen();
+    #ifdef linux // Parce que unifier les systèmes serait trop sympa...
+    open_file("Fonts/win.txt");
+    #endif
+    #ifdef _WIN32
+    open_file("Fonts\\win.txt");
+    #endif  
 }
 void open_file(string file){
     string line;
@@ -45,7 +59,12 @@ int game_over(int display[limit][limit],int mine[limit][limit]){
     else{
         setColor(9, 9); // Blue FG White BG.
         clear_screen();
-        open_file("Fonts\\game_over.txt");
+        #ifdef linux // Parce que unifier les systèmes serait trop sympa...
+    open_file("Fonts/game_over.txt");
+    #endif
+    #ifdef _WIN32
+    open_file("Fonts\\game_over.txt");
+    #endif  
         return  1;
     }
     

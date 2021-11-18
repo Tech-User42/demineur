@@ -13,3 +13,4 @@ void title();
 void display_grid(int tab[limit][limit]); // Affiche la grille de démineur passé en argument.
 void c_return(); 
 void display_empty();
+void you_win();
