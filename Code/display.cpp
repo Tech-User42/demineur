@@ -11,7 +11,7 @@
 
 void title(){
     clear_screen();
-    open_file("Fonts\\title.txt");
+    open_file("title.txt");
 }
 void open_file(string file){
     string line;

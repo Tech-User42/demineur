@@ -12,6 +12,8 @@
 #include "main.h"
 
 
+
+
 void setup_game(int display[limit][limit],int mine[limit][limit],int marked[limit][limit]){
     init_rand();
     setup_screen(); // Définition des Colonnes et des lignes du terminal.

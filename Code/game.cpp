@@ -29,7 +29,7 @@ void create_tab(int tab[limit][limit]){ // Fill un tableau avec des 0.
 }
 void create_mines(int tab[limit][limit]){
     for(unsigned short i = 0; i<4;i++){
-        tab[random()][random()]=9; // Lignes Colonnes.
+        tab[gen_random()][gen_random()]=9; // Lignes Colonnes.
     }
 }
 void mark_mine(int tab[limit][limit],int marked[limit][limit],int x,int y){

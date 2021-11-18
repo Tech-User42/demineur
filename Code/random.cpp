@@ -5,6 +5,6 @@ int init_rand(){
     return 0;
 }
 
-int random(){
+int gen_random(){
     return (rand() % (limit-1) + 1);
 }
