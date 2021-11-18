@@ -1,7 +1,12 @@
 # [Demineur version shell en C++ Mini-Projet #1)](https://github.com/Tech-User42/demineur)
 
 ![Doliprane.png](https://github.com/Tech-User42/demineur/blob/main/Documents/screen.png)
-## Important !
+## Installer le jeu
+- Pour pouvoir lancer le jeu voici les étapes à suivre :
+1. Télécharger la version correspondant à votre S.E [Juste ici ;)](https://github.com/Tech-User42/demineur/releases)
+2. Dézipper l'executable et le dossier Fonts dans un dossier et suivre la procédure suivant le S.E    *(c.f doc propre à chaque release)*
+3. Profiter du jeu ! Psst apparement il y à un code de triche à mettre en argument de l'executable ;) (./Demineur_Linux --cheats ou Demineur_Windows.exe --cheats)
+## Télécharger le code
 - Pour pouvoir utiliser ce projet correctement voici les étapes à suivre :
 1. `git clone https://github.com/Tech-User42/demineur.git`
 2. `cd demineur`
