@@ -106,6 +106,7 @@ int play(int tab[limit][limit],int mine[limit][limit],int marked[limit][limit],b
     bool the_end = false; // Flag pour la loop de game (à revoir ça me plait pas).
     while(!the_end){
         inp = input(inp); // On demande les coords avec la fonction structurée.
+        clear_screen();
         switch(choice()){
             case 1:
                 creuser(mine,inp.row,inp.col);

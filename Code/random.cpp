@@ -6,5 +6,5 @@ int init_rand(){
 }
 
 int gen_random(){
-    return (rand() % (limit-1) + 1);
+    return (rand() % (limit-1));
 }
