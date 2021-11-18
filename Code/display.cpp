@@ -91,7 +91,6 @@ void display_grid(int tab[limit][limit]){  // Affiche la grille de démineur pas
 setColor(4, 7); // Blue FG White BG.
 cout << "   ";
     for(unsigned short i = 0; i<limit;i++){
-            
             cout << i << "  "; 
     }
     cout << endl << " \n";
