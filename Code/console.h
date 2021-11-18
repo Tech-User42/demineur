@@ -6,14 +6,11 @@
 struct entry{
         int row;
         int col;
-    };
-typedef struct {
-        int row;
-        int col;
-        int out;
-    }mine_detection;
-void clear_screen(); // Clear la console
-void setup_screen(); // Règle la taille du terminal
+    }; // Définition de la structure de la position du curseur.
 
-int choice();
-entry input(entry inp);
+
+void clear_screen(); // Clear la console.
+void setup_screen(); // Règle la taille du terminal. (Bugué)
+
+int choice(); // Choix de l'action à effectuée  Creuser Marquer Rien.
+entry input(entry inp); // Fonction de récupération des coordonées.

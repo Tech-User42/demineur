@@ -65,6 +65,7 @@ void check_for_mine_around(int tab[limit][limit],int mine[limit][limit] ,unsigne
     cout << tab[i][j] << "  ";
 }
 void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
+    print_help();
     setColor(4, 7); // Blue FG White BG.
     cout << "   ";
     for(int i = 0; i<limit;i++){

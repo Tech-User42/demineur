@@ -78,6 +78,14 @@ void c_return(){ // Fonction de retour en couleur pour faire le contour en bleu 
     cout << " "<<endl;
     setColor(9, 9); // Blue FG White BG. 
 }
+void print_help(){
+    setColor(2, 3); // Blue FG White BG.
+    cout << "Case creus\202es : " << 5 << endl;
+    setColor(5, 3); // Magenta FG White BG
+    cout << "Case marqu\202es : " << 6 << endl << endl; 
+    setColor(9, 9); // Reset des couleurs.
+
+}
 
 void display_grid(int tab[limit][limit]){  // Affiche la grille de démineur passé en argument. Ligne Colonne.
 setColor(4, 7); // Blue FG White BG.
