@@ -3,4 +3,4 @@
 1. `sudo apt install g++ -y`
 2. `git clone https://github.com/Tech-User42/demineur.git`
 3. `cd demineur`
-4. `g++ -o main Code/*.cpp && ./main --cheats`
+4. `g++ -o Demineur_Linux Code/*.cpp && ./Demineur_Linux --cheats`
