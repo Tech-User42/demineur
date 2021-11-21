@@ -44,9 +44,6 @@ int main(int argc,  char *argv[]){
         
     }
     else{
-        display_grid(display); // Display de la grille de mine.
-    }
-    else{
         display_empty();
     }
     play(display,mine,marked,cheat); // Start la game.
