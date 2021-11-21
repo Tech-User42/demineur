@@ -1,3 +1,10 @@
+/*************************************************************
+* Nom ............ : display.cpp
+* Rôle ........... : Gérer l'affichage des grilles du démineur.
+* Auteur ......... : Alex.P Clément.S Théo.M
+* Date création .. : 2021
+* Version/Màj .... : 0.1
+*************************************************************/
 #include <fstream>
 #include <string>
 /*
@@ -11,7 +18,21 @@
 
 void title(){
     clear_screen();
+    #ifdef linux // Parce que unifier les systèmes serait trop sympa...
+    open_file("Fonts/title.txt");
+    #endif
+    #ifdef _WIN32
     open_file("Fonts\\title.txt");
+    #endif  
+}
+void you_win(){
+    clear_screen();
+    #ifdef linux // Parce que unifier les systèmes serait trop sympa...
+    open_file("Fonts/win.txt");
+    #endif
+    #ifdef _WIN32
+    open_file("Fonts\\win.txt");
+    #endif  
 }
 void open_file(string file){
     string line;
@@ -32,10 +53,11 @@ int game_over(int display[limit][limit],int mine[limit][limit]){
     clear_screen();
     string retry;
     setColor(1, 3); // Blue FG White BG.
-    cout << "Vous avez touch\202 une mine, voulez vous relancer une partie ? (O/N) ";
+    cout << "Vous avez touch"<<ET<<"une mine, voulez vous relancer une partie ? (O/N) ";
     cin >> retry;
     if(retry=="o"||retry=="O"||retry=="y"||retry=="Y"){
         setColor(9, 9); // Blue FG White BG.
+        clear_screen();
         clear_screen();
         create_tab(display); // Fill le tableau display avec des 0.
         create_tab(mine); // Fill le tableau mine avec des 0.
@@ -45,7 +67,13 @@ int game_over(int display[limit][limit],int mine[limit][limit]){
     else{
         setColor(9, 9); // Blue FG White BG.
         clear_screen();
+        clear_screen();
+        #ifdef linux // Parce que unifier les systèmes serait trop sympa...
+        open_file("Fonts/game_over.txt");
+        #endif
+        #ifdef _WIN32
         open_file("Fonts\\game_over.txt");
+        #endif  
         return  1;
     }
     
@@ -57,12 +85,19 @@ void c_return(){ // Fonction de retour en couleur pour faire le contour en bleu 
     cout << " "<<"\n";
     setColor(9, 9); // Blue FG White BG. 
 }
+void print_help(){
+    setColor(2, 3); // Blue FG White BG.
+    cout << "Case creus"<<ET<<"es : " << 5 << endl;
+    setColor(5, 3); // Magenta FG White BG
+    cout << "Case marqu"<<ET<<"es : " << 6 << endl << endl; 
+    setColor(9, 9); // Reset des couleurs.
+
+}
 
 void display_grid(int tab[limit][limit]){  // Affiche la grille de démineur passé en argument. Ligne Colonne.
 setColor(4, 7); // Blue FG White BG.
 cout << "   ";
     for(unsigned short i = 0; i<limit;i++){
-            
             cout << i << "  "; 
     }
     cout << "\n" << " \n";

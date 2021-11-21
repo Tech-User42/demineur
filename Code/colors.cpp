@@ -3,7 +3,7 @@
 * Rôle ........... : Change colors in linux/MacOs terminal with a cout
 * Auteur ......... : Ezio Cangialosi
 * Date création .. : 16/11/2021
-* Version/Màj .... :
+* Version/Màj .... : 
 * Licence ........ : GPLv4
 *************************************************************/
 

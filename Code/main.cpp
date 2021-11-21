@@ -4,12 +4,13 @@
 * Auteur ......... : Théo MARECHAL
 * Date création .. : 2021
 * Version/Màj .... : 0.1
-* Licence ........ : GPLv4
 *************************************************************/
 /*
 ############ Library homemade ############
 */
 #include "main.h"
+
+
 
 
 void setup_game(int display[limit][limit],int mine[limit][limit],int marked[limit][limit]){
@@ -37,6 +38,13 @@ int main(int argc,  char *argv[]){
             display_grid(mine); // Display de la grille de mine.
             cheat = 1;
         }
+        else{
+            display_grid(display); // Display de la grille de mine.
+        }
+        
+    }
+    else{
+        display_grid(display); // Display de la grille de mine.
     }
     else{
         display_empty();
