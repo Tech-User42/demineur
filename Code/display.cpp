@@ -52,9 +52,9 @@ int game_over(int display[limit][limit],int mine[limit][limit]){
 }
 
 void c_return(){ // Fonction de retour en couleur pour faire le contour en bleu et blanc.
-    cout << endl;
+    cout << "\n";
     setColor(4, 7); // Blue FG White BG. 
-    cout << " "<<endl;
+    cout << " "<<"\n";
     setColor(9, 9); // Blue FG White BG. 
 }
 
@@ -65,7 +65,7 @@ cout << "   ";
             
             cout << i << "  "; 
     }
-    cout << endl << " \n";
+    cout << "\n" << " \n";
     for(unsigned short i = 0 ; i < limit ; i++){
         setColor(4, 7); // Blue FG White BG.
         cout << i ;
@@ -95,7 +95,7 @@ cout << "   ";
     for(unsigned short i = 0; i<limit;i++){
             cout << i << "  "; 
     }
-    cout << endl << " \n";
+    cout << "\n" << " \n";
     for(unsigned short i = 0 ; i < limit ; i++){
         setColor(4, 7); // Blue FG White BG.
         cout << i ;

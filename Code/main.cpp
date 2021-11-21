@@ -32,11 +32,14 @@ int main(int argc,  char *argv[]){
     if ((argc > 1) == 1){ // Check si un argument est passé en argument.
         if(string(argv[1]) == "--cheats"){ // Check si le 1er argument est --cheats.
             setColor(4,1); // Vert sur Rouge.
-            cout << "      CODE DE TRICHE ACTIF !     "<<endl<<endl;
+            cout << "      CODE DE TRICHE ACTIF !     "<<"\n"<<"\n";
             setColor(9,9); // Vert sur Rouge.
             display_grid(mine); // Display de la grille de mine.
             cheat = 1;
         }
+    }
+    else{
+        display_empty();
     }
     play(display,mine,marked,cheat); // Start la game.
     return(0);

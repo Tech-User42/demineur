@@ -26,9 +26,9 @@ void clear_screen(){
 
 
 entry input(entry inp){
-    cout << endl << "Entrez les coordon\202es d'une case (Ligne de 0 \205 "<<limit-1<<" --> Colonne de 0 \205 "<<limit-1<<"): ";
+    cout << "\n" << "Entrez les coordon\202es d'une case (Ligne de 0 \205 "<<limit-1<<" --> Colonne de 0 \205 "<<limit-1<<"): ";
     scanf("%d %d",&inp.row ,&inp.col);
-    cout << "Vous avez choisi la case "<<inp.row<<" "<<inp.col<<endl;
+    cout << "Vous avez choisi la case "<<inp.row<<" "<<inp.col<<"\n";
     return inp;
 }
 

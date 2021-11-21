@@ -40,24 +40,26 @@ void mark_mine(int tab[limit][limit],int marked[limit][limit],int x,int y){
 }
 void creuser(int tab[limit][limit],int x,int y){
     tab[x][y] = 5;
+
 }
 bool check_for_mine(int mine[limit][limit],int x , int y){
     return mine[x][y] == 9; // Return True si il y a une mine.
 }
 
 void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
+    clear_screen();
     setColor(4, 7); // Blue FG White BG.
     cout << "   ";
-    for(unsigned short i = 0; i<limit;i++){
+    for(short i = 0; i<limit;i++){
         cout << i << "  "; // Display des numéro de colonnes.
     }
-    c_return();
-    for(unsigned short i = 0; i<limit;i++){
+    cout << "\n \n";
+    for(short i = 0; i<limit;i++){
         setColor(4, 7); // Blue FG White BG.
         cout << i ; // Display des numéro de lignes.
         setColor(9, 9); // Reset des couleurs.
         cout << "  ";
-        for(unsigned short j = 0; j<limit;j++){
+        for(short j = 0; j<limit;j++){
             if(tab[i][j]==5){
                 setColor(2, 3); // Blue FG White BG.
                 cout << tab[i][j]; 
@@ -71,11 +73,13 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
                 cout << "  ";
             }
             else if (mine[i][j]!=9){
+                setColor(9, 9); // Reset des couleurs.
                 cout << tab[i][j] << "  "; // On display 0. 
             }
             else if((x-i == 1) && (y-j == 1) || (x-i == -1) && (y-j == -1)){ // Bon basiquement cette section sert à ne pas sortir du tableau et afficher la proximitée avec les mines.
-                for(unsigned short t = i -1; t<i+2;t++){
-                    for(unsigned short h = j - 1; h<j+2;h++){
+                setColor(9, 9); // Reset des couleurs.
+                for(short t = i -1; t<i+2;t++){
+                    for(int h = j - 1; h<j+2;h++){
                         if(h > limit-1){
                             h = limit-1;
                         }
@@ -93,13 +97,18 @@ void display_game(int tab[limit][limit],int mine[limit][limit],int x,int y){
                         } 
                     }
                 }
+                setColor(9, 9); // Reset des couleurs.
                 cout << tab[i][j] << "  ";
             }
             else{
+                setColor(9, 9); // Reset des couleurs.
                 cout << tab[i][j]<< "  ";
             }
         }
-        c_return();
+        cout << "\n"; // Un ptit return pour afficher la grille correctement.
+        setColor(4, 7); // Blue FG White BG.
+        cout << " \n" ;
+        setColor(9, 9); // Reset des couleurs.
     }
 }
 
@@ -114,9 +123,9 @@ int play(int tab[limit][limit],int mine[limit][limit],int marked[limit][limit],b
         }
         switch(choice()){
             case 1:
-                creuser(mine,inp.row,inp.col);
+                creuser(tab,inp.row,inp.col);
                 if (check_for_mine(mine,inp.row,inp.col)){ // Si le joueur à touché une mine on trigger le Game-Over.
-                the_end = game_over(tab,mine); // Trigger le Game-Over.
+                    the_end = game_over(tab,mine); // Trigger le Game-Over.
                     if(the_end==0){
                         if(cheat==0){
                             display_empty();
@@ -148,6 +157,7 @@ int play(int tab[limit][limit],int mine[limit][limit],int marked[limit][limit],b
             clear_screen();
             cout << "OK";
         }
+        
     }
     return 0;
 }
